@@ -1,0 +1,164 @@
+.vacancy
+  z-index: 2
+  +r(992)
+    padding-top: 50px
+  .section-title
+    span
+      &::after
+        top: auto
+        left: 95%
+        bottom: 25px
+        margin: 0
+  &__grid
+    display: grid
+    grid-column-gap: 60px
+    grid-row-gap: 50px
+    grid-template-columns: 1fr 1fr
+    +r(1200)
+      grid-column-gap: 30px
+      grid-row-gap: 30px
+    +r(992)
+      grid-template-columns: 1fr
+  &__text
+    margin-top: 30px
+    +r(992)
+      order: 1
+    +r(480)
+      margin-top: 0
+    p
+      strong
+        font-size: 26px
+        font-weight: 500
+        +r(1200)
+          font-size: 22px
+        +r(767)
+          font-size: 18px
+    .btn
+      margin-top: 25px
+      +r(576)
+        display: block
+        max-width: 270px
+        margin: 35px auto 0
+
+.vacancy-card
+  position: relative
+  padding: 40px 75px 300px 50px
+  border-radius: 5px
+  background: $accent url(images/general/vacancy-bg-1.svg) no-repeat center / cover
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
+  +r(1200)
+    padding:
+      right: 45px
+      left: 30px
+  +r(480)
+    padding: 30px 15px
+  &__label
+    font-size: 20px
+    font-weight: 500
+    color: #fff
+    text-transform: uppercase
+    +r(480)
+      font-size: 14px
+  &__title
+    margin-bottom: 0
+    font-size: 30px
+    font-weight: 600
+    color: #fff
+    text-transform: none
+    +r(1200)
+      font-size: 26px
+    +r(767)
+      font-size: 24px
+    +r(480)
+      margin-bottom: 30px
+      font-size: 20px
+  &__price
+    margin: 0 0 5px
+    font-weight: 500
+    color: #000
+    span
+      font-size: 47px
+      font-weight: 600
+      +r(480)
+        font-size: 36px
+    &-wrap
+      position: absolute
+      bottom: 60px
+      left: 75px
+      padding: 30px 45px 35px 115px
+      background-color: #fff
+      border-radius: 10px
+      +r(480)
+        position: relative
+        bottom: auto
+        left: auto
+        padding: 60px 15px 30px
+        text-align: center
+    &-plus
+      position: absolute
+      top: 50%
+      left: 30px
+      transform: translateY(-50%)
+      width: 55px
+      height: 55px
+      +r(480)
+        top: 15px
+        left: 50%
+        transform: translateX(-50%)
+        width: 30px
+        height: 30px
+      &::before, &::after
+        content: ''
+        position: absolute
+        top: 27.5px
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: #3193B8
+        +r(480)
+          top: 15px
+      &::after
+        transform: rotate(90deg)
+    &-label
+      margin: 0
+      font-weight: 500
+      text-transform: uppercase
+      color: #3193b8
+      +r(480)
+        font-size: 14px
+    &-order
+      font-weight: 500
+      color: $dark-accent
+      text-decoration: underline
+  &--purple
+    background: #2c18c4 url(images/general/vacancy-bg-2.svg) no-repeat center / cover
+    .vacancy-card
+      &__price
+        &-wrap
+          left: auto
+          right: 0
+          border-radius: 5px 0 0 5px
+          +r(480)
+            border-radius: 5px
+  &--pink
+    padding-bottom: 510px
+    background: #8b57fb url(images/general/vacancy-bg-3.svg) no-repeat center / cover
+    .vacancy-card
+      &__price
+        margin-bottom: 25px
+        &-wrap
+          bottom: 80px
+          padding: 160px 40px 45px
+          text-align: center
+          +r(480)
+            position: relative
+            bottom: auto
+            left: auto
+            padding: 60px 15px 30px
+            text-align: center
+        &-plus
+          top: 45px
+          left: 50%
+          transform: translateX(-50%)
+          +r(480)
+            top: 15px

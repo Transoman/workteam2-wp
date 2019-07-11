@@ -1,0 +1,36 @@
+.footer
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: -1
+    height: 870px
+    background: url(images/general/footer-shape.svg) no-repeat center top / cover
+  &__wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 40px 0 50px
+    border-top: 1px solid $accent
+    font-size: 14px
+    +r(767)
+      padding: 20px 0
+    +r(576)
+      display: block
+      text-align: center
+      & > *:not(:last-child)
+        margin-bottom: 10px
+  a
+    font-weight: 500
+    color: #3193B8
+    text-decoration: underline
+    &:hover, &:focus
+      color: $accent
+
+.copy
+  margin: 0
+  font-weight: 500
+  color: #7A7A7A

@@ -1,0 +1,26 @@
+.partners
+  +r(1200)
+    padding-bottom: 50px
+  +r(992)
+    padding-bottom: 0
+  +r(767)
+    padding-bottom: 20px
+  &::before
+    content: ''
+    position: absolute
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: -1
+    height: 1030px
+    background: url(images/general/partners-shape.svg) no-repeat center bottom / cover
+    +r(992)
+      height: 500px
+
+.partners-list
+  &__item
+    margin-bottom: 45px
+    +r(767)
+      text-align: center
+    +r(576)
+      margin-bottom: 30px

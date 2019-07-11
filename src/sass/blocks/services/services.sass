@@ -1,0 +1,121 @@
+.services
+  &::before
+    content: ''
+    position: absolute
+    top: 60px
+    right: 0
+    left: 0
+    height: 1200px
+    background: url(images/general/services-shape.svg) no-repeat center top / cover
+    +r(992)
+      height: 580px
+  &__text
+    padding: 0 55px 0 15px
+    font-size: 16px
+    color: $gray
+    line-height: 2.1
+    +r(480)
+      padding: 0
+      line-height: 1.6
+
+.services-tab
+  &__list
+    padding: 0 15px
+    margin: 0 -15px 90px
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    +r(1200)
+      padding: 0
+      margin-bottom: 70px
+    +r(992)
+      margin-bottom: 30px
+    li
+      width: 50%
+      min-height: 200px
+      margin-bottom: 30px
+      padding: 0 15px
+      cursor: pointer
+      +r(1200)
+        min-height: 170px
+      +r(480)
+        width: 100%
+        min-height: auto
+        margin-bottom: 15px
+      &.is-active
+        svg
+          fill: #fff
+        .services-tab__list
+          &-inner
+            background-color: $accent
+          &-title
+            color: #fff
+    &-inner
+      display: block
+      height: 100%
+      padding: 35px 30px 30px
+      background-color: #fff
+      box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.1)
+      border-radius: 5px
+      +trans
+      +r(1200)
+        padding: 25px 20px 20px
+      &:hover
+        background-color: $accent
+        svg
+          fill: #fff
+        .services-tab__list
+          &-title
+            color: #fff
+    svg
+      width: 60px
+      height: 60px
+      margin-bottom: 20px
+      fill: #3193B8
+      +trans
+      +r(480)
+        width: 30px
+        height: 30px
+        margin-bottom: 10px
+    &-title
+      display: block
+      font-family: $gilroy-font
+      font-size: 21px
+      font-weight: 500
+      color: $dark
+      line-height: 1.3
+      +trans
+      +r(1200)
+        font-size: 18px
+  &__img
+    margin-bottom: 75px
+    width: 100%
+    border-radius: 10px
+    +r(992)
+      margin-bottom: 45px
+  &__title
+    margin-bottom: 30px
+    font-size: 30px
+    font-weight: 600
+    +r(992)
+      font-size: 26px
+      margin-bottom: 20px
+    +r(767)
+      font-size: 20px
+  &__content
+    display: none
+    +r(992)
+      margin-bottom: 50px
+    p
+      line-height: 1.8
+      +r(767)
+        font-size: 16px
+    .btn
+      margin-top: 20px
+      +r(480)
+        display: block
+        max-width: 290px
+        margin: 20px auto 0
+    &.is-active
+      display: block
+      animation: fadeIn 0.5s ease-in-out

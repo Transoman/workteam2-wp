@@ -1,0 +1,116 @@
+.nav
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 11
+  height: 100%
+  width: 320px
+  padding: 70px 20px 30px
+  background-color: #fff
+  overflow-y: auto
+  transform: translateX(-100%)
+  +trans
+  &.open
+    transform: translateX(0)
+  &-close
+    position: absolute
+    top: 20px
+    right: 20px
+    width: 30px
+    height: 30px
+    padding: 0
+    border: 0
+    background: none
+    &::before, &::after
+      content: ''
+      position: absolute
+      right: 0
+      width: 100%
+      height: 2px
+      background-color: #000
+    &::before
+      transform: rotate(-45deg)
+    &::after
+      transform: rotate(45deg)
+    &:focus
+      outline: none
+  &-list
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+
+
+.nav-overlay
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 10
+  background-color: rgba(#000, 0.5)
+  opacity: 0
+  visibility: hidden
+  +trans
+  &.is-active
+    opacity: 1
+    visibility: visible
+
+.nav-toggle
+  position: absolute
+  left: 15px
+  top: 15px
+  width: 50px
+  height: 28px
+  padding: 0
+  margin: 0
+  outline: none
+  border: none
+  background: none
+  z-index: 1
+  cursor: pointer
+  +transition
+  +r(767)
+    width: 30px
+    height: 20px
+  +r(480)
+    top: 50%
+    transform: translateY(-50%)
+  &:focus
+    outline: none
+  &__line
+    position: relative
+    display: block
+    height: 2px
+    width: 100%
+    background: $dark
+    +transition
+    &::after, &::before
+      content: ''
+      position: absolute
+      left: 0
+      display: block
+      height: 2px
+      width: 100%
+      background: $dark
+      +transition
+    &::before
+      top: -13px
+      +r(767)
+        top: -9px
+    &::after
+      top: 13px
+      +r(767)
+        top: 9px
+  &.active
+    .nav-toggle__line
+      background: transparent
+      &::after
+        top: 0
+        transform: rotate(45deg)
+      &::before
+        top: 0
+        transform: rotate(-45deg)

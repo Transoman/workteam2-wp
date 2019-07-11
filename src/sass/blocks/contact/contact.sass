@@ -1,0 +1,53 @@
+.contact
+  padding-top: 200px
+  padding-bottom: 80px
+  +r(1200)
+    padding-top: 100px
+  +r(767)
+    padding-top: 50px
+    padding-bottom: 50px
+  .section-title
+    margin-bottom: 40px
+    +r(767)
+      margin-bottom: 35px
+    span
+      &::after
+        width: 120px
+  &__content
+    +r(992)
+      margin-bottom: 30px
+  &__item
+    margin-bottom: 30px
+    font-size: 24px
+    font-weight: 600
+    color: $dark
+    +r(767)
+      font-size: 20px
+    &:last-child
+      margin-bottom: 0
+    &-label
+      margin: 0 0 5px
+      font-size: 16px
+      font-weight: 500
+      color: $gray
+      text-transform: uppercase
+    &-descr
+      font-size: 16px
+      font-weight: 400
+      color: $dark
+      +r(576)
+        display: block
+      & + br
+        +r(576)
+          display: none
+    p
+      &:last-child
+        margin-bottom: 0
+  &__map
+    height: 400px
+    margin-top: 60px
+    border-radius: 10px
+    box-shadow: 3px 10px 35px rgba(0, 0, 0, 0.1)
+    overflow: hidden
+    +r(992)
+      margin-top: 0

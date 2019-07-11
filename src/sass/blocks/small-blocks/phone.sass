@@ -1,0 +1,20 @@
+.phone
+  display: flex
+  align-items: center
+  &__item
+    margin-right: 60px
+    line-height: 1.1
+    +r(1200)
+      margin-right: 30px
+    &:last-child
+      margin-right: 0
+  &__tel
+    font-size: 21px
+    font-weight: 600
+    color: $main-color
+    white-space: nowrap
+    +r(1200)
+      font-size: 18px
+  &__descr
+    margin: 0
+    font-size: 13px
