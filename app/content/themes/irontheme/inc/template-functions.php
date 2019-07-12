@@ -63,3 +63,13 @@ function js_variables(){
   echo '<script type="text/javascript">window.wp_data = ' . json_encode($variables) . ';</script>';
 }
 add_action('wp_head','js_variables');
+
+/**
+ * Validate Phone Number CF7
+ */
+function custom_filter_wpcf7_is_tel( $result, $tel ) {
+  $result = preg_match( '/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/', $tel );
+  return $result;
+}
+
+add_filter( 'wpcf7_is_tel', 'custom_filter_wpcf7_is_tel', 10, 2 );

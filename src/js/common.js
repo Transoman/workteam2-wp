@@ -3,6 +3,7 @@
 global.jQuery = require('jquery');
 let svg4everybody = require('svg4everybody'),
   mPageScroll2id = require('page-scroll-to-id'),
+  imask = require('imask'),
   popup = require('jquery-popup-overlay');
 
 jQuery(document).ready(function($) {
@@ -140,8 +141,23 @@ jQuery(document).ready(function($) {
     },
   });
 
+  let inputMask = function() {
+    let inputMask = $('input[type="tel"]');
+    let maskOptions = {
+      mask: '+{7} (000) 000-00-00'
+    };
+
+    if (inputMask.length) {
+      inputMask.each(function(i, el) {
+        IMask(el, maskOptions);
+      });
+    }
+
+  };
+
   contactForm();
   tabs();
+  inputMask();
 
   // SVG
   svg4everybody({});
