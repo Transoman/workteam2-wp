@@ -106,6 +106,10 @@ if ( have_rows('home_layout') ):
           </div>
 
         </div>
+
+        <img src="<?php echo THEME_URL; ?>/images/general/pic-1.svg" class="float-img float-img-1" alt="">
+        <img src="<?php echo THEME_URL; ?>/images/general/pic-2.svg" class="float-img float-img-2" alt="">
+
       </section>
 
     <?php elseif ( get_row_layout() == 'services' ): ?>
@@ -155,6 +159,9 @@ if ( have_rows('home_layout') ):
           </div>
 
         </div>
+
+        <img src="<?php echo THEME_URL; ?>/images/general/pic-3.svg" class="float-img float-img-3" alt="">
+
       </section>
 
     <?php elseif ( get_row_layout() == 'vacancy' ): ?>
@@ -223,6 +230,9 @@ if ( have_rows('home_layout') ):
           </div>
 
         </div>
+
+        <img src="<?php echo THEME_URL; ?>/images/general/pic-4.svg" class="float-img float-img-4" alt="">
+
       </section>
 
     <?php elseif( get_row_layout() == 'partners' ): ?>
@@ -278,6 +288,8 @@ if ( have_rows('home_layout') ):
           <?php endif; ?>
 
         </div>
+
+        <img src="<?php echo THEME_URL; ?>/images/general/pic-5.svg" class="float-img float-img-5" alt="">
 
       </section>
 
@@ -347,6 +359,9 @@ if ( have_rows('home_layout') ):
             myMap.geoObjects.add(myPlacemark);
           }
         </script>
+
+        <img src="<?php echo THEME_URL; ?>/images/general/pic-6.svg" class="float-img float-img-6" alt="">
+        <img src="<?php echo THEME_URL; ?>/images/general/pic-7.svg" class="float-img float-img-7" alt="">
 
       </section>
 

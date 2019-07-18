@@ -1,3 +1,33 @@
 @import 'logo'
 @import 'phone'
 @import 'scroll-nav'
+
+.float-img
+  position: absolute
+  z-index: -1
+  +r(767)
+    display: none
+  &-1
+    right: 88%
+    bottom: -50px
+  &-2
+    left: 84%
+    bottom: 220px
+  &-3
+    left: 82%
+    bottom: 0
+  &-4
+    bottom: 640px
+    right: 90%
+  &-5
+    top: 100px
+    right: 89%
+  &-6
+    top: -240px
+    right: -60px
+  &-7
+    right: 90%
+    bottom: 70px
+    +r(1499)
+      bottom: -50px
+      right: 92%
