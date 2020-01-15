@@ -179,7 +179,6 @@ if ( have_rows('home_layout') ):
 
                 <?php if (get_sub_field('salary_1')): ?>
                   <div class="vacancy-card__price-wrap">
-                    <span class="vacancy-card__price-plus"></span>
                     <p class="vacancy-card__price-label">зарплата</p>
                     <p class="vacancy-card__price">от <span><?php the_sub_field('salary_1'); ?></span> руб/час</p>
                     <a href="#" class="vacancy-card__price-order order-vacancy_open">Оставить заявку</a>
@@ -195,7 +194,6 @@ if ( have_rows('home_layout') ):
 
               <?php if (get_sub_field('salary_2')): ?>
                 <div class="vacancy-card__price-wrap">
-                <span class="vacancy-card__price-plus"></span>
                 <p class="vacancy-card__price-label">зарплата</p>
                 <p class="vacancy-card__price">от <span><?php the_sub_field('salary_2'); ?></span> руб/час</p>
                 <a href="#" class="vacancy-card__price-order order-vacancy_open">Оставить заявку</a>
@@ -219,7 +217,6 @@ if ( have_rows('home_layout') ):
 
                 <?php if (get_sub_field('salary_3')): ?>
                   <div class="vacancy-card__price-wrap">
-                    <span class="vacancy-card__price-plus"></span>
                     <p class="vacancy-card__price-label">зарплата</p>
                     <p class="vacancy-card__price">от <span><?php the_sub_field('salary_3'); ?></span> руб/час</p>
                     <a href="#" class="vacancy-card__price-order order-vacancy_open">Оставить заявку</a>
